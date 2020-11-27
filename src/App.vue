@@ -32,6 +32,16 @@ export default {
 
 <style lang="less">
 @import "./styles/index.less";
+.child-view {
+    will-change: transform;
+    transition: all 0.4s cubic-bezier(0.55,0,0.1,1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    perspective: 1000;
+    box-sizing: border-box
+  }
 .slide-left-enter, .slide-right-leave-to {
   opacity: 0;
   transform: translateX(100%)
@@ -56,24 +66,14 @@ body {
   overflow-x: hidden;
   font-weight: 400;
   font-size: 14px;
-  color: #2c3e50;
   font-family: Helvetica, sans-serif;
   position: relative;
   a {
     text-decoration: none;
   }
-  .child-view {
-    will-change: transform;
-    transition: all 0.4s cubic-bezier(0.55,0,0.1,1);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    perspective: 1000;
-    box-sizing: border-box
-  }
+  ul, li{
+  list-style-type: none;
 }
-
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -91,11 +91,6 @@ body {
       #iphonex-helper-body {
         height: 100%;
         box-sizing: border-box !important;
-        .index{
-          .list{
-             padding-bottom: 90px;
-          }
-        }
       }
     }
   }
@@ -103,13 +98,7 @@ body {
   @media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
     #app {
       #iphonex-helper-body {
-        /*padding: 0 0 28PX 0 !important;*/
         box-sizing: border-box !important;
-        .index{
-          .list{
-             padding-bottom: 90px;
-          }
-        }
       }
     }
   }
@@ -117,13 +106,7 @@ body {
   @media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
     #app {
       #iphonex-helper-body {
-        /*padding: 0 0 28PX 0 !important;*/
         box-sizing: border-box !important;
-        .index{
-          .list{
-             padding-bottom: 90px;
-          }
-        }
       }
     }
   }
@@ -132,7 +115,6 @@ body {
   @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
     #app {
       #iphonex-helper-body {
-        /*padding: 0 0 28PX 0 !important;*/
         box-sizing: border-box !important;
       }
     }
@@ -142,7 +124,6 @@ body {
   @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
     #app {
       #iphonex-helper-body {
-        /*padding: 0 0 28PX 0 !important;*/
         box-sizing: border-box !important;
       }
     }
@@ -152,10 +133,10 @@ body {
   @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
     #app {
       #iphonex-helper-body {
-        /*padding: 0 0 28PX 0 !important;*/
         box-sizing: border-box !important;
       }
-    }
+    } 
   }
+}
 
 </style>
